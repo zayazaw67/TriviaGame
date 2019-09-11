@@ -1,5 +1,5 @@
-// setInterval()
-var trivia = [
+
+var triviaQuestions = [
     {
         question1: "insert multiple choice question",
         answer1: {
@@ -37,20 +37,18 @@ var trivia = [
     correctAnswer: c
     }
 ]
+
+var triviaTimer = 240;
 var correct = 0;
 var incorrect = 0;
-timer = 180;
+var unanswered = 0;
+var remainingTime
+timer = 15;
 
-function startgame(
+
+function startGame() {
     correct = 0,
     incorrect = 0,
-)
-
-
-// var questions = [
-//     { q: "The sky is blue.", a: "t" },
-//     { q: "There are 365 days in a year.", a: "t" },
-//     { q: "There are 42 ounces in a pound.", a: "f" },
-//     { q: "The Declaration of Independence was created in 1745.", a: "f" },
-//     { q: "Bananas are vegetables.", a: "f" }
-//   ];
+    unanswered = 0;
+    clearInterval(triviaTimer);
+}
